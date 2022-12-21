@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+
+
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,6 +23,7 @@ function handleClick() {
         <Form.Control
           type="email"
           placeholder="Enter email"
+          autoComplete="off"
           name="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
@@ -35,6 +38,7 @@ function handleClick() {
         <Form.Control
           type="password"
           placeholder="Password"
+          autoComplete="off"
           name="password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
@@ -46,7 +50,9 @@ function handleClick() {
       <Button variant="primary" type="submit" onClick= { () => handleClick()}>
         Login
       </Button>
-      <Button> Sign up</Button>
+      <Button> 
+        signup
+        </Button>
     </Form>
   );
 }
