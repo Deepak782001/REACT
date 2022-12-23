@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import SignUp from "./Signup";
 
 
 
@@ -50,7 +51,7 @@ function handleClick() {
       <Button variant="primary" type="submit" onClick= { () => handleClick()}>
         Login
       </Button>
-      <Button> 
+      <Button onClick={() => <SignUp />}> 
         signup
         </Button>
     </Form>
